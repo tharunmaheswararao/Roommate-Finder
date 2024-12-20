@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="application.EditPropertyController" spacing="10" alignment="CENTER" style="-fx-padding: 20;">
+    <!-- Header -->
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Button fx:id="backButton" text="Back" onAction="#handleBack" style="-fx-font-size: 14;" />
+        <Label text="Edit Property Details" style="-fx-font-size: 18; -fx-font-weight: bold;" />
+    </HBox>
+
+    <!-- ScrollPane for the Form -->
+    <ScrollPane fitToWidth="true" vbarPolicy="AS_NEEDED" hbarPolicy="NEVER">
+        <VBox fx:id="detailsContainer" spacing="20" alignment="TOP_CENTER" style="-fx-padding: 10;">
+            <!-- Image Upload -->
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Image:" />
+                <Button text="Upload Image" fx:id="uploadImageButton" onAction="#handleUploadImage" />
+                <Label fx:id="imagePathLabel" text="No file selected" />
+            </HBox>
+
+            <!-- Street Address -->
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Street Address:" />
+                <TextField fx:id="streetAddressField" promptText="Enter street address" prefWidth="300" />
+            </HBox>
+
+            <!-- Area and City -->
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Area:" />
+                <TextField fx:id="areaField" promptText="Enter area" prefWidth="200" />
+                <Label text="City:" />
+                <TextField fx:id="cityField" promptText="Enter city" prefWidth="200" />
+            </HBox>
+
+            <!-- State and Pincode -->
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="State:" />
+                <TextField fx:id="stateField" promptText="Enter state" prefWidth="200" />
+                <Label text="Pincode:" />
+                <TextField fx:id="pincodeField" promptText="Enter pincode" prefWidth="150" />
+            </HBox>
+
+            <!-- Accommodation Type -->
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Accommodation Type:" />
+                <ChoiceBox fx:id="accommodationTypeChoiceBox" />
+            </HBox>
+
+            <!-- Rent -->
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Rent:" />
+                <TextField fx:id="rentField" promptText="Enter rent" />
+            </HBox>
+
+            <!-- Open Spots -->
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Open Spot(s):" />
+                <Spinner fx:id="openSpotsSpinner" min="0" max="10" />
+            </HBox>
+
+            <!-- Spot Type -->
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Spot Type:" />
+                <ChoiceBox fx:id="spotTypeChoiceBox" />
+            </HBox>
+
+            <!-- Beds and Baths -->
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Beds:" />
+                <Spinner fx:id="bedSpinner" min="0" max="10" />
+                <Label text="Baths:" />
+                <Spinner fx:id="bathSpinner" min="0" max="10" />
+            </HBox>
+
+            <!-- Move-In and Move-Out Dates -->
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Move-In Date:" />
+                <DatePicker fx:id="moveInDatePicker" />
+                <Label text="Move-Out Date:" />
+                <DatePicker fx:id="moveOutDatePicker" />
+            </HBox>
+
+            <!-- Property Information -->
+            <VBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Property Information:" />
+                <TextArea fx:id="propertyInfoTextArea" promptText="Enter additional property information" />
+            </VBox>
+
+            <!-- Submit Button -->
+            <Button text="Save" onAction="#handleSave" style="-fx-font-size: 14;" />
+        </VBox>
+    </ScrollPane>
+</VBox>

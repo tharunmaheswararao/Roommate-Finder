@@ -1,0 +1,18 @@
+VBox {
+    -fx-padding: 20;
+    -fx-spacing: 10;
+}
+
+Label {
+    -fx-font-size: 14px;
+}
+
+Button {
+    -fx-font-size: 14px;
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+}
+
+TextField, TextArea, ChoiceBox, Spinner, DatePicker {
+    -fx-min-width: 300px;
+}

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="application.UserProfileController" fitToWidth="true" style="-fx-padding: 20;" stylesheets="@styles.css">
+    <!-- Main Layout -->
+    <VBox spacing="20" alignment="TOP_CENTER" style="-fx-padding: 20;">
+    
+    <!-- Back Button -->
+        <HBox spacing="10" alignment="CENTER_LEFT" style="-fx-padding: 10;">
+            <Button text="Back" onAction="#handleBack" />
+        </HBox>
+        
+        <!-- User Profile Section -->
+        <VBox spacing="10" alignment="CENTER_LEFT" style="-fx-padding: 10; -fx-border-color: #ccc; -fx-border-radius: 5; -fx-background-radius: 5;">
+            <Label text="User Profile" style="-fx-font-size: 20; -fx-font-weight: bold;" />
+            <HBox spacing="10">
+                <Label text="First Name:" style="-fx-font-weight: bold;" />
+                <Label fx:id="firstNameLabel" />
+            </HBox>
+            <HBox spacing="10">
+                <Label text="Last Name:" style="-fx-font-weight: bold;" />
+                <Label fx:id="lastNameLabel" />
+            </HBox>
+            <HBox spacing="10">
+                <Label text="Email ID:" style="-fx-font-weight: bold;" />
+                <Label fx:id="emailLabel" />
+            </HBox>
+            <HBox spacing="10">
+                <Label text="Phone Number:" style="-fx-font-weight: bold;" />
+                <Label fx:id="phoneLabel" />
+            </HBox>
+            <Button text="Update Password" onAction="#handleUpdatePassword" />
+        </VBox>
+
+        <!-- User Posts Section -->
+        <VBox spacing="10" alignment="CENTER_LEFT" style="-fx-padding: 10; -fx-padding-left: 20;">
+		    <!-- Title -->
+		    <Label text="User Posts" style="-fx-font-size: 20; -fx-font-weight: bold;" />
+		
+		    <!-- Container for Property Cards -->
+		    <TilePane fx:id="propertyCardsContainer" hgap="20" vgap="20" style="-fx-padding-left: 0;" />
+		</VBox>
+    </VBox>
+</ScrollPane>

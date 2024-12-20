@@ -1,0 +1,161 @@
+/* General Background Styling */
+.root {
+    -fx-background-color: #F9FAFC; /* Soft white background */
+}
+
+/* Top Navigation Bar */
+.top-bar {
+    -fx-background-color: #007BFF; /* Vibrant blue background */
+    -fx-padding: 10;
+    -fx-spacing: 20;
+    -fx-alignment: center-left;
+}
+
+.app-title {
+    -fx-font-size: 20px;
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFFFFF; /* White text */
+}
+
+/* Buttons in Top Bar */
+.top-bar .button {
+    -fx-font-family: "Arial";
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFFFFF; /* White text */
+    -fx-background-color: #0056B3; /* Slightly darker blue */
+    -fx-padding: 10 20;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+
+.top-bar .button:hover {
+    -fx-background-color: #003F7F; /* Even darker blue on hover */
+}
+
+/* Sidebar Styling */
+.sidebar {
+    -fx-padding: 20;
+    -fx-spacing: 15;
+    -fx-background-color: #FFFFFF; /* Clean white background */
+    -fx-border-color: #007BFF;
+    -fx-border-width: 2;
+    -fx-border-radius: 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 2);
+}
+
+/* Enhanced Labels for All Pages */
+.label {
+    -fx-font-size: 16px;
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold;
+    -fx-text-fill: #0056B3; /* Dark blue */
+    -fx-padding: 5 0;
+}
+
+/* Input Fields (TextField, PasswordField, TextArea) */
+.text-field, .password-field, .text-area {
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+    -fx-background-color: #FFFFFF; /* White background */
+    -fx-border-color: #007BFF;
+    -fx-border-width: 2;
+    -fx-border-radius: 5;
+    -fx-padding: 8;
+    -fx-text-fill: #333333; /* Neutral text color */
+}
+
+.text-field:focused, .password-field:focused, .text-area:focused {
+    -fx-border-color: #0056B3; /* Dark blue border on focus */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,255,0.25), 8, 0, 0, 2);
+}
+
+/* Login and Signup Page Headings */
+.page-heading {
+    -fx-font-size: 24px;
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold;
+    -fx-text-fill: #0056B3; /* Dark blue */
+    -fx-padding: 20;
+    -fx-alignment: center;
+}
+
+/* Welcome Page Buttons */
+.welcome-button {
+    -fx-font-size: 16px;
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFFFFF; /* White text */
+    -fx-background-color: #007BFF; /* Blue background */
+    -fx-padding: 12 30;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+}
+
+.welcome-button:hover {
+    -fx-background-color: #0056B3; /* Darker blue on hover */
+}
+
+/* Form Buttons (Login and Signup) */
+.submit-button {
+    -fx-background-color: #007BFF;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 30;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+}
+
+.submit-button:hover {
+    -fx-background-color: #0056B3; /* Darker blue on hover */
+}
+
+/* Back and Navigation Buttons */
+.back-button {
+    -fx-background-color: #D9E8FF; /* Light blue background */
+    -fx-text-fill: #0056B3; /* Dark blue text */
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 8 20;
+    -fx-cursor: hand;
+}
+
+.back-button:hover {
+    -fx-background-color: #B0D1FF; /* Slightly darker light blue on hover */
+}
+
+/* Link Text */
+.link-text {
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+    -fx-text-fill: #007BFF; /* Blue link color */
+    -fx-underline: true;
+}
+
+.link-text:hover {
+    -fx-text-fill: #0056B3; /* Darker blue on hover */
+}
+
+/* General Buttons */
+.button {
+    -fx-font-family: "Arial";
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFFFFF; /* White text */
+    -fx-background-color: #007BFF;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 10 15;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #0056B3; /* Darker blue on hover */
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox spacing="20" alignment="CENTER" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="application.WelcomeController" stylesheets="@styles.css">
+    <Text text="Welcome to Roommate Finder!!" style="-fx-font-size: 30px; -fx-font-weight: bold; -fx-fill: #0056B3;" />
+    <Button text="Login" onAction="#handleLoginRedirect" />
+    <Button text="Sign Up" onAction="#handleSignupRedirect" />
+</VBox>

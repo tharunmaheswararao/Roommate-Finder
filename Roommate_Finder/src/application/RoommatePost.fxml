@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="application.RoommatePostController" spacing="10" alignment="CENTER" style="-fx-padding: 20;" stylesheets="@styles.css">
+    <HBox spacing="10">
+        <!-- Back Button -->
+        <Button fx:id="backButton" text="Back" onAction="#handleBack" style="-fx-padding: 5; -fx-font-size: 14;" alignment="CENTER_LEFT" />
+        <Label text="Roommate Post Creation" style="-fx-font-size: 18; -fx-font-weight: bold;" alignment="CENTER" />
+    </HBox>
+
+    <!-- ScrollPane for the Details -->
+    <ScrollPane fitToWidth="true" fitToHeight="false" vbarPolicy="AS_NEEDED" hbarPolicy="NEVER">
+        <VBox fx:id="detailsContainer" spacing="20" alignment="TOP_CENTER" style="-fx-padding: 10;">
+            <!-- Image Upload -->
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Image:" />
+                <Button text="Upload Image" onAction="#handleUploadImage" />
+                <Label fx:id="imagePathLabel" text="No file selected" />
+            </HBox>
+
+            <VBox spacing="10" alignment="CENTER_LEFT">
+                <!-- Street Address -->
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <Label text="Street Address:" />
+                    <TextField fx:id="streetAddressField" promptText="Enter street address" prefWidth="300" />
+                </HBox>
+
+                <!-- Area & City -->
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <Label text="Area:" />
+                    <TextField fx:id="areaField" promptText="Enter area" prefWidth="300" />
+                    <Label text="City:" />
+                    <TextField fx:id="cityField" promptText="Enter city" prefWidth="200" />
+                </HBox>
+
+                <!-- State & Pin -->
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <Label text="State:" />
+                    <TextField fx:id="stateField" promptText="Enter state" prefWidth="200" />
+                    <Label text="Pincode:" />
+                    <TextField fx:id="pincodeField" promptText="Enter pincode" prefWidth="150" />
+                </HBox>
+            </VBox>
+
+            <!-- Temporary or Permanent -->
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Type of Accommodation:" />
+                <ChoiceBox fx:id="typeChoiceBox" />
+            </HBox>
+
+            <!-- Cost Fields -->
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Rent:" />
+                <TextField fx:id="costField" promptText="Enter Rent" />
+                <Label fx:id="costTypeLabel" text="" />
+            </HBox>
+
+            <!-- Number of Open Spots -->
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Open Spot(s):" />
+                <Spinner fx:id="openSpotsSpinner" />
+            </HBox>
+
+            <!-- Private or Shared -->
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Type of Spot" />
+                <ChoiceBox fx:id="privateSharedChoiceBox" />
+            </HBox>
+
+            <!-- Beds and Baths -->
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <VBox>
+                    <Label text="Bed(s):" />
+                    <Spinner fx:id="bedSpinner" />
+                </VBox>
+                <VBox>
+                    <Label text="Bath(s):" />
+                    <Spinner fx:id="bathSpinner" />
+                </VBox>
+            </HBox>
+
+            <!-- Move-In and Move-Out Dates -->
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <VBox>
+                    <Label text="Move-In Date:" />
+                    <DatePicker fx:id="moveInDatePicker" />
+                </VBox>
+                <VBox>
+                    <Label text="Move-Out Date:" />
+                    <DatePicker fx:id="moveOutDatePicker" />
+                </VBox>
+            </HBox>
+
+            <!-- Utilities / Preferences -->
+            <VBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Utilities/Property Information:" alignment="TOP_LEFT" />
+                <TextArea fx:id="utilitiesTextArea" promptText="Enter property information, preferences, etc." />
+            </VBox>
+
+            <!-- Submit Button -->
+            <Button text="Submit" onAction="#handleSubmitPost" />
+        </VBox>
+    </ScrollPane>
+</VBox>

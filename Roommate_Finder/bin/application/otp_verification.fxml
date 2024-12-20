@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox spacing="20" alignment="CENTER" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="application.OTPVerificationController">
+    <Text text="Enter OTP" style="-fx-font-size: 20px;" />
+    <TextField fx:id="otpField" promptText="Enter OTP" />
+    <Text fx:id="errorText" style="-fx-fill: red;" />
+    <Button text="Verify OTP" onAction="#handleVerifyOTP" />
+</VBox>

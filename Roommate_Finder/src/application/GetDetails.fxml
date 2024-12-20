@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="application.GetUserPropertyController" fitToWidth="true" style="-fx-padding: 20;" stylesheets="@styles.css">
+    <VBox spacing="10" alignment="TOP_CENTER">
+        <!-- Header Section -->
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <!-- Back Button -->
+            <Button text="Back" onAction="#handleBack" style="-fx-padding: 5; -fx-font-size: 14;" />
+            
+            <!-- Spacer to push the heading to the center -->
+            <Region HBox.hgrow="ALWAYS" />
+            
+            <!-- Property Details Heading -->
+            <Label text="Property Details" style="-fx-font-size: 18; -fx-font-weight: bold;" />
+            
+            <!-- Spacer to balance the layout -->
+            <Region HBox.hgrow="ALWAYS" />
+        </HBox>
+
+        <!-- Container for displaying fetched properties -->
+        <VBox fx:id="detailsContainer" spacing="20" alignment="TOP_CENTER" />
+    </VBox>
+</ScrollPane>
